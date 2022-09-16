@@ -4,6 +4,29 @@ echo "Running realcugan."
 echo "Scale: $1"
 echo "Noise: $2"
 
+echo "Checking for existing files."
+
+if [ -d "./bin" ]; then
+    echo "bin exists."
+else
+    echo "bin does not exist."
+    mkdir bin
+fi
+
+if [ -d "./baseimg" ]; then
+    echo "baseimg exists."
+else
+    echo "baseimg does not exist."
+    mkdir baseimg
+fi
+
+if [ -d "./dist" ]; then
+    echo "dist exists."
+else
+    echo "dist does not exist."
+    mkdir dist
+fi
+
 if [ -f "./bin/realcugan" ]; then
   echo "realcugan exists."
 else
