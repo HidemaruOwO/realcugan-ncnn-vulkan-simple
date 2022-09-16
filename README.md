@@ -4,9 +4,21 @@
 
 ## 🌱 セットアップ
 
-realcugan-ncnn-vulkan のバイナリを`bin/realcugan`に配置してください
+realcugan-ncnn-vulkan のバイナリとモデルを`bin/`に配置してください  
+**※reaclcugan-ncnn-vulkan を`realcugan`にリネームしてください**
 
-## ⚙️ コマンド
+### 🔻 バイナリとモデルのダウンロード
+
+- [amd64 Windows](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/windows/rcnvg.zip)
+- [amd64 Mac](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/mac/rcnvg.zip)
+- [amd64 Linux](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/linux/rcnvg.zip)
+- [AppleSilicon Mac](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/arm/mac/rcnvg.zip)
+
+## 🚀 使い方
+
+`baseimg/`ディレクトリに変換元の画像を保存したら`convert.sh`を実行してください  
+`dist/`ディレクトリに画像が出力されます  
+このコマンドを実行すると`dist/`ディレクトリ内のファイルが全て削除されるので、`dist/`にファイルが存在している場合は予め別のディレクトリにバックアップしてください
 
 ```bash
 bash convert.sh 2 2
