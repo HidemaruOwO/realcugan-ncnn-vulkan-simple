@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Running realcugan."
+echo "Running realcugan-ncnn-vulkan."
 echo "Scale: $1"
 echo "Noise: $2"
 
@@ -32,11 +32,11 @@ else
     mkdir dist
 fi
 
-if [ -f "./bin/realcugan" ]; then
-  echo "realcugan exists."
+if [ -f "./bin/realcugan-ncnn-vulkan" ]; then
+  echo "realcugan-ncnn-vulkan exists."
 else
-  echo "realcugan does not exist."
-  echo "Please the realcugan binary in the bin directory."
+  echo "realcugan-ncnn-vulkan does not exist."
+  echo "Please the realcugan-ncnn-vulkan binary in the bin directory."
   exit 1
 fi
 
@@ -55,7 +55,7 @@ done
 echo "Converting..."
 for i in ${fileary[@]}; do
   echo $i
-  ./bin/realcugan -i $i -o ./dist/$(basename $i).png -s $1 -n $2
+  ./bin/realcugan-ncnn-vulkan -i $i -o ./dist/$(basename $i).png -s $1 -n $2
   echo "Converted"
 done
 
