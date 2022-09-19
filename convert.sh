@@ -6,6 +6,11 @@ echo "Noise: $2"
 
 echo "Checking for existing files."
 
+# is mac os
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  find -f . | grep .DS_Store | xargs rm
+fi
+
 if [ -d "./bin" ]; then
     echo "bin exists."
 else
