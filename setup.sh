@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function not_support {
-  echo "Your platform ($(uname -a)) is not supported."
+  echo -e "\e[31mYour platform ($(uname -a)) is not supported.\e[m"
   exit 1
 }
 
@@ -15,14 +15,14 @@ function create_bin {
 if type "curl" > /dev/null 2>&1; then
     echo "curl is exist"
   else
-    echo "Please install curl."
+    echo -e "\e[31mPlease install curl.\e[m"
     exit 1
 fi
 
 if type "unzip" > /dev/null 2>&1; then
     echo "unzip is exist"
   else
-    echo "Please install unzip."
+    echo -e "\e[31mPlease install unzip.\e[m"
     exit 1
 fi
 
@@ -50,5 +50,5 @@ else
   not_support
 fi
 
-echo "Done."
+echo -e "\e[36mDone.\e[m"
 

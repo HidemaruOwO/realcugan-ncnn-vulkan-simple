@@ -14,29 +14,29 @@ fi
 if [ -d "./bin" ]; then
     echo "bin exists."
 else
-    echo "bin does not exist."
+    echo -e "\e[31mbin does not exist.\e[m"
     mkdir bin
 fi
 
 if [ -d "./baseimg" ]; then
     echo "baseimg exists."
 else
-    echo "baseimg does not exist."
+    echo -e "\e[31mbaseimg does not exist.\e[m"
     mkdir baseimg
 fi
 
 if [ -d "./dist" ]; then
     echo "dist exists."
 else
-    echo "dist does not exist."
+    echo -e "\e[31mdist does not exist.\e[m"
     mkdir dist
 fi
 
 if [ -f "./bin/realcugan-ncnn-vulkan" ]; then
   echo "realcugan-ncnn-vulkan exists."
 else
-  echo "realcugan-ncnn-vulkan does not exist."
-  echo "Please the realcugan-ncnn-vulkan binary in the bin directory."
+  echo -e "\e[31mrealcugan-ncnn-vulkan does not exist.\e[m"
+  echo -e "\e[31mPlease the realcugan-ncnn-vulkan binary in the bin directory.\e[m"
   exit 1
 fi
 
@@ -52,11 +52,11 @@ for filepath in $files; do
   fi
 done
 
-echo "Converting..."
+echo -e "\e[33mConverting...\e[m"
 for i in ${fileary[@]}; do
   echo $i
   ./bin/realcugan-ncnn-vulkan -i $i -o ./dist/$(basename $i).png -s $1 -n $2
-  echo "Converted"
+  echo -e "\e[32mConverted\e[m"
 done
 
-echo "Done."
+echo -e "\e[36mDone.\e[m"
