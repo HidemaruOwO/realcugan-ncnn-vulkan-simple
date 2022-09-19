@@ -52,11 +52,11 @@ for filepath in $files; do
   fi
 done
 
-echo "変換中..."
+echo "Converting..."
 for i in ${fileary[@]}; do
   echo $i
   ./bin/realcugan -i $i -o ./dist/$(basename $i).png -s $1 -n $2
-  echo "変換完了"
+  echo "Converted"
 done
 
-echo "処理を終了します"
+echo "Done."
