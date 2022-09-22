@@ -31,3 +31,7 @@ bash convert.sh 2 2
 
 - `scale`= upscale ratio (1/2/3/4, default=2)
 - `noise-level`= denoise level (-1/0/1/2/3, default=-1)
+
+## 👀 動作確認
+
+- AppleSilicon Mac
