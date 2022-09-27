@@ -12,10 +12,10 @@ bash setup.sh
 
 ### 🔻 バイナリとモデルのダウンロード
 
-- [amd64 Windows](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/windows/rcnvg.zip)
-- [amd64 Mac](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/mac/rcnvg.zip)
 - [amd64 Linux](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/x86_64/linux/rcnvg.zip)
 - [AppleSilicon Mac](https://01.raw.v-sli.me/realcugan-ncnn-vulkan/arm/mac/rcnvg.zip)
+
+**ビルド済みのバイナリがない場合は[realcugan-ncnn-vulkan](https://github.com/nihui/realcugan-ncnn-vulkan)をビルドしてください**
 
 ## 🚀 使い方
 
@@ -34,4 +34,11 @@ bash convert.sh 2 2
 
 ## 👀 動作確認
 
-- AppleSilicon Mac
+- Mac (AppleSilicon)
+- Linux (x86_64)
+
+## ‼️ クラッシュとエラーの対処
+
+正しいドライバがインストールされてるか確認してください  
+ドライバが正しくないとクラッシュしてしまいます  
+もし正しいドライバをインストールしてエラーが発生した場合は[issuse](https://github.com/HidemaruOwO/realcugan-ncnn-vulkan-simple/issues)でお知らせください
