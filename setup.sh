@@ -12,6 +12,28 @@ function create_bin {
   mv rcnvg bin
 }
 
+if [ -d "./bin" ]; then
+    echo "bin exists."
+else
+    echo -e "\e[31mbin does not exist.\e[m"
+    mkdir bin
+fi
+
+if [ -d "./baseimg" ]; then
+    echo "baseimg exists."
+else
+    echo -e "\e[31mbaseimg does not exist.\e[m"
+    mkdir baseimg
+fi
+
+if [ -d "./dist" ]; then
+    echo "dist exists."
+else
+    echo -e "\e[31mdist does not exist.\e[m"
+    mkdir dist
+fi
+
+
 if type "curl" > /dev/null 2>&1; then
     echo "curl is exist"
   else
